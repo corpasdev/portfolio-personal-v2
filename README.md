@@ -1,43 +1,50 @@
-# Astro Starter Kit: Minimal
+# My personal web portfolio
 
-```sh
-npm create astro@latest -- --template minimal
-```
+Learn about my work and experience gained from more than 3 years working with real companies in Colombia.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+![My personal web portfolio](.github/cover.jpg)
 
-## 🚀 Project Structure
+## ✨ Features
 
-Inside of your Astro project, you'll see the following folders and files:
+- **Client-side Actions** - Built with Astro's and Railway
+- **Responsive Design** - Mobile-first responsive personal portfolio
+- **Social Integration** - Optional social media links with icons
+<!-- - **Type-safe Configuration** - Environment variables with Astro's env schema -->
+<!-- - **Error Handling** - Comprehensive client and server-side validation -->
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## 🚀 Quick Deploy
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Deploy to Railway: [Railway](https://railway.com/) 
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## 📋 Manual Setup
 
-Any static assets, like images, can be placed in the `public/` directory.
+1. **Clone and install:**
 
-## 🧞 Commands
+   ```bash
+   git clone https://github.com/corpasdev/portfolio-personal-v2.git
+   cd portfolio-personal-v2
+   npm install
+   ```
 
-All commands are run from the root of the project, from a terminal:
+2. **Configure environment:**
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+   ```bash
+   cp .env.example .env
+   ```
 
-## 👀 Want to learn more?
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+3. **Start developing:**
+   ```bash
+   npm run dev
+   ```
+
+## 📚 Built With
+
+- [Astro](https://astro.build) - Web framework
+- [Motion React](https://motion.dev/docs/react) - Animation library
+- [TailwindCss](https://tailwindcss.com/docs/installation/using-vite) - Css framework
+- [Lucide React](https://lucide.dev/guide/packages/lucide-react) - Icon library
+
+## 📄 License
+
+MIT License - feel free to use for your projects!
