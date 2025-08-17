@@ -118,7 +118,7 @@ export default function HeroContent() {
           animate="visible"
         >
           <motion.a
-            href="https://github.com/brandoncorpas"
+            href="https://github.com/corpasdev"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[var(--secondary)] hover:text-[var(--primary)] transition-colors"
