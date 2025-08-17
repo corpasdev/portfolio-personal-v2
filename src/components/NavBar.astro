@@ -1,0 +1,125 @@
+---
+import { Menu, X } from 'lucide-react';
+import Button from './Button';
+---
+
+<header class="fixed top-0 left-0 w-full z-50 py-4">
+  <div class="container mx-auto px-4 md:px-6">
+    <nav class="flex items-center justify-between">
+      <!-- Logo -->
+      <a href="/" class="text-[var(--foreground)] font-bold text-xl">
+        Corpas<span class="text-[var(--primary)]">Dev</span>
+      </a>
+      
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center space-x-8">
+        <ul class="flex space-x-6">
+          <li>
+            <a href="/" class="text-[var(--foreground)] hover:text-[var(--primary)] transition-colors">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="/about" class="text-[var(--secondary)] hover:text-[var(--primary)] transition-colors">
+              About
+            </a>
+          </li>
+          <li>
+            <a href="/projects" class="text-[var(--secondary)] hover:text-[var(--primary)] transition-colors">
+              Projects
+            </a>
+          </li>
+          <li>
+            <a href="/blog" class="text-[var(--secondary)] hover:text-[var(--primary)] transition-colors">
+              Blog
+            </a>
+          </li>
+        </ul>
+        
+        <Button 
+          href="/contact" 
+          variant="outline"
+          client:load
+        >
+          Contact
+        </Button>
+      </div>
+      
+      <!-- Mobile menu button -->
+      <button 
+        id="menu-toggle" 
+        class="md:hidden text-[var(--foreground)] focus:outline-none"
+        aria-label="Toggle menu"
+      >
+        <Menu className="h-6 w-6" />
+      </button>
+    </nav>
+  </div>
+  
+  <!-- Mobile menu (hidden by default) -->
+  <div 
+    id="mobile-menu" 
+    class="fixed inset-0 bg-[var(--background)] flex-col items-center justify-center hidden"
+  >
+    <button 
+      id="close-menu" 
+      class="absolute top-4 right-4 text-[var(--foreground)] focus:outline-none"
+      aria-label="Close menu"
+    >
+      <X className="h-6 w-6" />
+    </button>
+    
+    <ul class="flex flex-col space-y-6 items-center">
+      <li>
+        <a href="/" class="text-[var(--foreground)] text-xl hover:text-[var(--primary)] transition-colors">
+          Home
+        </a>
+      </li>
+      <li>
+        <a href="/about" class="text-[var(--secondary)] text-xl hover:text-[var(--primary)] transition-colors">
+          About
+        </a>
+      </li>
+      <li>
+        <a href="/projects" class="text-[var(--secondary)] text-xl hover:text-[var(--primary)] transition-colors">
+          Projects
+        </a>
+      </li>
+      <li>
+        <a href="/blog" class="text-[var(--secondary)] text-xl hover:text-[var(--primary)] transition-colors">
+          Blog
+        </a>
+      </li>
+      <li class="pt-4">
+        <Button 
+          href="/contact" 
+          variant="outline"
+          client:load
+        >
+          Contact
+        </Button>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<script>
+  // Mobile menu functionality
+  const menuToggle = document.getElementById('menu-toggle');
+  const closeMenu = document.getElementById('close-menu');
+  const mobileMenu = document.getElementById('mobile-menu');
+  
+  if (menuToggle && closeMenu && mobileMenu) {
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.remove('hidden');
+      mobileMenu.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    });
+    
+    closeMenu.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      mobileMenu.classList.remove('flex');
+      document.body.style.overflow = '';
+    });
+  }
+</script>

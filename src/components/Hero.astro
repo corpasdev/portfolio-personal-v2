@@ -1,0 +1,31 @@
+---
+import HeroContent from './HeroContent';
+---
+
+<section class="relative min-h-screen w-full flex items-center justify-center py-20 px-4 md:px-6 overflow-hidden">
+  <!-- Fondo con gradiente y efecto de malla -->
+  <div class="absolute inset-0 z-0">
+    <!-- Gradiente de fondo -->
+    <div class="absolute inset-0 bg-[var(--background)] opacity-95"></div>
+    
+    <!-- Puntos de malla decorativos (grid pattern) -->
+    <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMyODM5NDUiIGZpbGwtb3BhY2l0eT0iMC40Ij48cGF0aCBkPSJNMzYgMzRjMC0xLjEuOS0yIDItMnMyIC45IDIgMi0uOSAyLTIgMi0yLS45LTItMnptMC0xOGMwLTEuMS45LTIgMi0yczIgLjkgMiAyLS45IDItMiAyLTItLjktMi0yem0tMTggMGMwLTEuMS45LTIgMi0yczIgLjkgMiAyLS45IDItMiAyLTItLjktMi0yem0wIDE4YzAtMS4xLjktMiAyLTJzMiAuOSAyIDItLjkgMi0yIDItMi0uOS0yLTJ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-40"></div>
+    
+    <!-- Círculo de luz decorativo -->
+    <div class="absolute top-1/4 right-1/4 w-96 h-96 rounded-full bg-[var(--primary)] opacity-10 blur-[100px]"></div>
+    <div class="absolute bottom-1/4 left-1/4 w-96 h-96 rounded-full bg-[var(--primary)] opacity-10 blur-[100px]"></div>
+  </div>
+  
+  <!-- Contenido principal del Hero -->
+  <div class="relative z-10 w-full">
+    <HeroContent client:load />
+  </div>
+  
+  <!-- Indicador de scroll -->
+  <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
+    <span class="text-[var(--secondary)] text-sm mb-2">Scroll</span>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 5L12 19M12 19L19 12M12 19L5 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[var(--primary)]"/>
+    </svg>
+  </div>
+</section>
