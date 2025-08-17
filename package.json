@@ -2,9 +2,13 @@
   "name": "brandoncorpasv2-com",
   "type": "module",
   "version": "0.0.1",
+  "engines": {
+    "node": ">=18.14.1"
+  },
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "start": "npx serve dist",
     "preview": "astro preview",
     "astro": "astro"
   },
@@ -19,7 +23,8 @@
     "motion": "^12.23.12",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "tailwindcss": "^4.1.12"
+    "tailwindcss": "^4.1.12",
+    "serve": "^14.2.1"
   },
   "devDependencies": {
     "prettier": "^3.6.2",
