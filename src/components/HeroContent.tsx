@@ -76,7 +76,7 @@ export default function HeroContent() {
           variants={itemVariants}
         >
           Senior Frontend Engineer <br />
-          <span className="text-[var(--primary)]">& UX/UI Designer</span>
+          <span className="text-[var(--primary)]">& Prompts engineer</span>
         </motion.h1>
 
         {/* Description */}
